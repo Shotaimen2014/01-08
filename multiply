@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>multiply</title>
+<meta charset="utf-8">
+</head>
+<body>
+<SCRIPT language="JavaScript">
+function multiply(){
+ document.fm.C.value = document.fm.A.value * document.fm.B.value;
+}
+</SCRIPT>
+
+<FORM name="fm">
+  時給を入力<INPUT size="20" type="text" name="A">円/時間<br><br>
+
+  労働時間を入力<INPUT size="20" type="text" name="B">時間<br><br>
+  <INPUT type="button" value="収入を計算" onclick="multiply()"><br><br>
+今日の収入  <INPUT size="20" type="text" name="C">円
+</FORM>
+
+
+</body>
+</html>
