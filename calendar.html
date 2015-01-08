@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>sample app</title>
+<meta charset="utf-8">
+</head>
+<body>
+<style>
+table,tbody,tr,td{
+	border: solid 1px black;
+}
+</style>
+<table id="calendar">
+<thead>
+12月
+</thead>
+<tbody>
+<SCRIPT language="JavaScript">
+function add(){
+	document.fm.H.value = eval(document.fm.A.value) + eval(document.fm.B.value) +
+	eval(document.fm.C.value)	+ eval(document.fm.D.value) + eval(document.fm.E.value) +
+	eval(document.fm.F.value) + eval(document.fm.G.value);
+}
+</SCRIPT>
+<tr>
+	<FORM name="fm">
+<td id="d1" class="date">1
+	<INPUT size="10" type="text" name="A"></td>
+<td id="d2" class="date">2
+	<INPUT size="10" type="text" name="B"</td>
+<td id="d3" class="date">3
+	<INPUT size="10" type="text" name="C"</td>
+<td id="d4" class="date">4
+	<INPUT size="10" type="text" name="D"</td>
+<td id="d5" class="date">5
+	<INPUT size="10" type="text" name="E"</td>
+<td id="d6" class="date">6
+	<INPUT size="10" type="text" name="F"</td>
+<td id="d7" class="date">7
+	<INPUT size="10" type="text" name="G"</td>
+</tr>
+<tr>
+<td id="d1" class="date">8</td>
+<td id="d2" class="date">9</td>
+<td id="d3" class="date">10</td>
+<td id="d4" class="date">11</td>
+<td id="d5" class="date">12</td>
+<td id="d6" class="date">13</td>
+<td id="d7" class="date">14</td>
+</tr>
+
+<tr>
+<td id="d1" class="date">15</td>
+<td id="d2" class="date">16</td>
+<td id="d3" class="date">17</td>
+<td id="d4" class="date">18</td>
+<td id="d5" class="date">19</td>
+<td id="d6" class="date">20</td>
+<td id="d7" class="date">21</td>
+</tr>
+
+<tr>
+<td id="d1" class="date">22</td>
+<td id="d2" class="date">23</td>
+<td id="d3" class="date">24</td>
+<td id="d4" class="date">25</td>
+<td id="d5" class="date">26</td>
+<td id="d6" class="date">27</td>
+<td id="d7" class="date">28</td>
+</tr>
+<tr>
+<td id="d1" class="date">29</td>
+<td id="d2" class="date">30</td>
+<td id="d3" class="date">31</td>
+<td id="d4" class="date"></td>
+<td id="d5" class="date"></td>
+<td id="d6" class="date"></td>
+<td id="d7" class="date"></td>
+</tr>
+</tbody>
+</table>
+<INPUT type="button" value="労働時間を計算" onclick="add()"><br>
+<INPUT size="20" type="text" name="H">時間
+
+<SCRIPT language="JavaScript">
+	function multiply(){
+		document.fm.Z.value = document.fm.H.value * document.fm.X.value;
+	}
+
+	</SCRIPT>
+<br><br>
+
+		時給を入力<INPUT size="20" type="text" name="X">円/時間<br>
+
+
+				<INPUT type="button" value="収入を計算" onclick="multiply()"><br><br>
+					今月の収入  <INPUT size="20" type="text" name="Z">円
+
+
+</FORM>
+
+<script>
+var mydates = document.querySelectorAll(".date");
+for(var i=0; i<mydates.length; i++){
+	mydates[i].addEventListener("click",function(e){
+		var inputted = window.prompt();
+		e.target.innerHTML = inputted;
+	});
+}
+</script>
+</body>
+</html>
